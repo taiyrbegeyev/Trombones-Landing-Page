@@ -133,6 +133,11 @@ main {
     margin-left: 50px;
 }
 
+#video {
+    width: 560px;
+    height: 315px;
+}
+
 #how-it-works{
     margin-top: 50px;
     text-align: center;
@@ -140,6 +145,8 @@ main {
 
 #pricing {
     margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -203,31 +210,66 @@ footer {
 
 #copyrights {
     font-size: 14px;
-
 }
 
-@media screen and (max-width: 600px) {
-    #header {
-        flex-direction: column;
-        padding: 20px;
-    }  
+@media screen and (max-width: 320px) {
     #logo {
+        display: none;
     }
+    #header {
+        min-height: 3vh;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    #header {
+        position: unset;
+        border-bottom: 1px solid black;
+    }  
     #nav-bar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
     }
     #nav-bar > li {
-        padding: 1vh;
+        padding: 0.3vh;
+    }
+    .description {
+        margin-left: 15px;
+    }
+    #hero h2 {
+        margin: 20px;
+    }
+    #video {
+        width: 450px;
+        height: 250px;
+    }
+    #pricing {
+        flex-direction: column;
     }
 }
 
 @media screen and (max-width: 992px) {
     #header {
         flex-direction: column;
-        padding: 20px;
         align-items: center;
+        padding-left: 0px;
+        padding: 20px;
     }  
+    main, footer {
+        max-width: 700px;
+    }
+    .description {
+        margin-left: 35px;
+    }
+    #features {
+        max-width: 100vw;
+        width: 100%;
+        margin: 0 auto; 
+    }
+    .grid {
+        padding: 0 30px;
+        margin: 0;
+    }
 }
 
